@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // Get the requested filename (e.g., 'about.html')
+    const path = window.location.pathname.split('/').pop();
+
+    // Your project repo name
+    const repoName = 'Dr_Ravi_portfolio';
+
+    // Construct correct URL
+    const baseUrl = window.location.origin + '/' + repoName + '/';
+    const correctUrl = baseUrl + (path ? path : '');
+
+    // Redirect after a short delay (or immediately)
+    setTimeout(() => {
+      window.location.href = correctUrl;
+    }, 100);
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="#" id="redirect-link">the correct page</a>...</p>
+  <script>
+    document.getElementById('redirect-link').href = correctUrl;
+  </script>
+</body>
+</html>
