@@ -1,0 +1,76 @@
+<!-- blog.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Dr. Ravishankar Ashokkumar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <h2 class="section-title">Recent Activities & Insights</h2>
+            <div class="blog-grid" id="blogGrid">
+                <!-- Blog posts will be loaded here dynamically -->
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <button id="prevPage" class="pagination-btn" disabled>
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <span id="pageInfo">Page <span id="currentPage">1</span> of <span id="totalPages">1</span></span>
+                <button id="nextPage" class="pagination-btn">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Modal -->
+    <div class="modal" id="blogModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <h2 class="modal-title">Blog Title</h2>
+                <p class="modal-date">Date</p>
+                <div class="slideshow-container">
+                    <div class="slideshow-images">
+                        <img class="slideshow-image active" src="images/slideshow1.jpg" alt="Event image">
+                        <img class="slideshow-image" src="images/slideshow2.jpg" alt="Event image">
+                        <img class="slideshow-image" src="images/slideshow3.jpg" alt="Event image">
+                    </div>
+                    
+                    <button class="slideshow-btn prev">&#10094;</button>
+                    <button class="slideshow-btn next">&#10095;</button>
+                    
+                    <div class="slideshow-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+                <div class="modal-content-text">
+                    <p>Blog content will be displayed here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script src="blog-data/blog-posts.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>

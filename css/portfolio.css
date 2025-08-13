@@ -1,0 +1,74 @@
+/* css/portfolio.css */
+/* Portfolio Section */
+#portfolio .education-item, 
+#portfolio .experience-item, 
+#portfolio .publication-item, 
+#portfolio .award-item {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+}
+
+#portfolio .education-item:last-child, 
+#portfolio .experience-item:last-child, 
+#portfolio .publication-item:last-child, 
+#portfolio .award-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#portfolio .institution, 
+#portfolio .company, 
+#portfolio .publication-title, 
+#portfolio .award-name {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+#portfolio .degree, 
+#portfolio .position, 
+#portfolio .journal, 
+#portfolio .award-details {
+    color: var(--gray);
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+#portfolio .year, 
+#portfolio .duration {
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Mobile adjustments for portfolio page */
+@media (max-width: 768px) {
+    #portfolio .content-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    #portfolio .institution, 
+    #portfolio .company, 
+    #portfolio .publication-title, 
+    #portfolio .award-name {
+        font-size: 1rem;
+    }
+    
+    #portfolio .degree, 
+    #portfolio .position, 
+    #portfolio .journal, 
+    #portfolio .award-details {
+        font-size: 0.9rem;
+    }
+    
+    #portfolio .year, 
+    #portfolio .duration {
+        font-size: 0.9rem;
+    }
+}
